@@ -1,0 +1,4 @@
+2025-05-06 19:23:17,410 - INFO - Arquivo JSON data.json carregado com succeso
+2025-05-06 19:23:17,413 - INFO - Processando registro {'id': 1, 'name': 'John', 'age': 30}
+2025-05-06 19:23:17,416 - INFO - Processando registro {'id': 2, 'name': 'Alice', 'age': 25}
+2025-05-06 19:23:17,418 - WARNING - Erro no registro: {'id': 3, 'name': 'Bob', 'age': None} erro: None is not of type 'number'
