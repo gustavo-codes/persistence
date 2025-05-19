@@ -43,5 +43,13 @@ def atualizar_equipe(equipe_id:int, equipe:Equipe ,session:Session = Depends(get
 
 @router.delete('/{equipe_id}')
 def excluir_equipe(equipe_id:int, session:Session = Depends(get_session)):
+    equipe_atual = session.get(Equipe,equipe_id)
+
+    if not equipe_atual:
+        raise HTTPException(status_code=404, detail='Equipe não encotrada')
     
+    session.delete(equipe_atual)
+    session.commit()
+
+    return {'Equipe deletada':equipe_atual}
     
