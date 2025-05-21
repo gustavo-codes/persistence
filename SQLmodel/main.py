@@ -1,7 +1,7 @@
 from fastapi import  HTTPException, FastAPI
 from sqlmodel import Session, select
 from db import create_db_and_tables
-from routers import equipes, membros
+from routers import equipes, membros, projetos
 
 app = FastAPI()
 
@@ -15,3 +15,4 @@ def home():
 
 app.include_router(equipes.router)
 app.include_router(membros.router)
+app.include_router(projetos.router)
